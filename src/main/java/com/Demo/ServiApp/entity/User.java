@@ -1,6 +1,6 @@
 package com.Demo.ServiApp.entity;
 
-import com.Demo.ServiApp.enumeration.RoleEnums;
+import com.Demo.ServiApp.enumeration.RoleEnum;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
@@ -10,6 +10,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,8 +24,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class User implements Serializable{
-    private static final long serialVersionUID = 1L;
+    protected static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
@@ -32,7 +35,7 @@ public class User implements Serializable{
     @Column(nullable = false)
     protected String lastName;
     @Enumerated(value = EnumType.STRING)
-    protected RoleEnums role;
+    protected RoleEnum role;
     @Column(nullable = false)
     protected Long idNumber;
     @Column(nullable = false)

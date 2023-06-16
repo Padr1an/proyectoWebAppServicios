@@ -8,7 +8,7 @@ package com.Demo.ServiApp.enumeration;
  *
  * @author Pablo
  */
-public enum RoleEnums {
+public enum RoleEnum {
     
     USER, ADMIN, PROFESSIONAL;
     
