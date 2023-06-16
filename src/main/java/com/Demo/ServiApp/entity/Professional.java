@@ -1,6 +1,7 @@
 package com.Demo.ServiApp.entity;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

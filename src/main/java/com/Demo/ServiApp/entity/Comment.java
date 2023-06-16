@@ -1,4 +1,3 @@
-
 package com.Demo.ServiApp.entity;
 
 import java.io.Serializable;
