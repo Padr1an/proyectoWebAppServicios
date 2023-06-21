@@ -42,16 +42,16 @@ public class User implements Serializable{
     @Enumerated(value = EnumType.STRING)
     protected RoleEnum role;
     
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     protected Long idNumber;
     
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     protected String email;
     
     @Column(nullable = false)
     protected String password;
     
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     protected String phone;
     
     @Column(nullable = false)
@@ -64,7 +64,7 @@ public class User implements Serializable{
     protected String city;
     
     //protected List<comment> comment = new arraysList();
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     protected String imagenName;
     
     @CreationTimestamp
